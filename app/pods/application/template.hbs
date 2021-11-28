@@ -4,14 +4,16 @@
 {{!-- <WelcomePage /> --}}
 {{!-- Feel free to remove this! --}}
 <ul>
-  <Card
-    @headline="Card no. 1"
-    @sub-headline="is the best"
-  />
-  <Card
-    @headline="Card no. 2"
-    @sub-headline="is the coolest"
-  />
+  {{log @model}}
+  {{#each @model as |card|}}
+    <Card
+{{!--       @headline={{card.fields.Headline}} --}}
+{{!--       @sub-headline={{card.fields.Sub-headline}} --}}
+      @cardFields={{card.fields}}
+   />
+
+ {{/each}}
+
 </ul>
 
 {{outlet}}

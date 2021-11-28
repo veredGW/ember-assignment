@@ -3,6 +3,7 @@
 module.exports = function (environment) {
   let ENV = {
     modulePrefix: 'ember-assignment',
+    podModulePrefix: 'ember-assignment/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',

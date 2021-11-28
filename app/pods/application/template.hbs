@@ -3,12 +3,10 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 {{!-- <WelcomePage /> --}}
 {{!-- Feel free to remove this! --}}
-<ul>
+<ul class="container">
   {{log @model}}
   {{#each @model as |card|}}
     <Card
-{{!--       @headline={{card.fields.Headline}} --}}
-{{!--       @sub-headline={{card.fields.Sub-headline}} --}}
       @cardFields={{card.fields}}
    />
 

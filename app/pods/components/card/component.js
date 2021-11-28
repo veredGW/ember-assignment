@@ -5,13 +5,11 @@ export default class CounterComponent extends Component {
     return this.args.cardFields.Headline;
   }
   get subHeadLine() {
-    return this.args.cardFields["Sub-headline"];
+    return this.args.cardFields['Sub-headline'];
   }
   get imageUrl() {
     // debugger
-    if (this.args.cardFields.HeaderImage === undefined)
-      return ""
-    else
-      return this.args.cardFields.HeaderImage[0].url;
+    if (this.args.cardFields.HeaderImage === undefined) return '';
+    else return this.args.cardFields.HeaderImage[0].url;
   }
 }

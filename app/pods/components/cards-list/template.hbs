@@ -1,0 +1,33 @@
+Inside Cards list
+<div class="show-mobile-list">
+<ul class="container">
+  {{log @list}}
+  {{#each @list as |card|}}
+    <Card
+      @cardFields={{card.fields}}
+   />
+
+ {{/each}}
+</ul>
+</div>
+<div  class="show-pagination">
+<ul class="container">
+  {{log this.cardsOfPage}}
+  {{#each this.cardsOfPage as |card|}}
+    <Card
+      @cardFields={{card.fields}}
+   />
+
+ {{/each}}
+</ul>
+
+<Pagination
+  @modelLength={{@list.length}}
+  @currentPage={{this.currentPage}}
+  @noPages={{this.noPages}}
+  @incPage={{this.incPage}}
+  @decPage={{this.decPage}}
+/>
+<h1>{{this.currentPage}}</h1>
+</div>
+{{yield}}

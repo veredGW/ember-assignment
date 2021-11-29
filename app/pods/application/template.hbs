@@ -3,19 +3,19 @@
 {{!-- The following component displays Ember's default welcome message. --}}
 {{!-- <WelcomePage /> --}}
 {{!-- Feel free to remove this! --}}
-<ul class="container">
-  {{log @model}}
-  {{#each @model as |card|}}
-    <Card
-      @cardFields={{card.fields}}
-   />
+{{!-- <ul class="container"> --}}
+{{!--   {{log @model}} --}}
+{{!--   {{#each @model as |card|}} --}}
+{{!--     <Card --}}
+{{!--       @cardFields={{card.fields}} --}}
+{{!--    /> --}}
 
- {{/each}}
-
-</ul>
-<div  class="show-pagination">
-<Pagination
-  @modelLength={{@model.length}}
+{{!--  {{/each}} --}}
+{{!-- </ul> --}}
+{{!-- <div  class="show-pagination"> --}}
+<CardsList
+  @list={{@model}}
 />
-</div>
+
+{{!-- </div> --}}
 {{outlet}}

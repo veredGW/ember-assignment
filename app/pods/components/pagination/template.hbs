@@ -1,1 +1,5 @@
+----Pagination---- number of items in list : {{@modelLength}}
+<h6>number of pages: {{this.noPages}}</h6>
+<h6>current page number: {{this.currentPage}}</h6>
+<button {{on "click" this.incPage}}> Next Page</button>
 {{yield}}

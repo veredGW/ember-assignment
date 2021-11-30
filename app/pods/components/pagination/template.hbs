@@ -1,6 +1,8 @@
-----Pagination---- number of items in list : {{@modelLength}}
-<h6>number of pages: {{@this.noPages}}</h6>
-<h6>current page number: {{@this.currentPage}}</h6>
-<button type="button" {{on "click" @this.incPage}}> Next Page</button>
+{{!-- ----Pagination---- number of items in list : {{@modelLength}} --}}
+{{!-- <h6>number of pages: {{@this.noPages}}</h6> --}}
+<div class="pagination">
 <button type="button" {{on "click" @this.decPage}}> Prev Page</button>
+<h3>{{@this.currentPage}}</h3>
+<button type="button" {{on "click" @this.incPage}}> Next Page</button>
+</div>
 {{yield}}

@@ -5,10 +5,10 @@
     <Card
       @cardFields={{card.fields}}
    />
-
  {{/each}}
 </ul>
 </div>
+
 <div  class="show-desktop">
 <ul class="container">
   {{log this.cardsOfPage}}
@@ -16,7 +16,6 @@
     <Card
       @cardFields={{card.fields}}
    />
-
  {{/each}}
 </ul>
 
@@ -26,6 +25,7 @@
   @noPages={{this.noPages}}
   @incPage={{this.incPage}}
   @decPage={{this.decPage}}
+  @setCurrentPage={{this.setCurrentPage}}
 />
 {{!-- <h1>{{this.currentPage}}</h1> --}}
 </div>

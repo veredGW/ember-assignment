@@ -1,8 +1,19 @@
 {{!-- ----Pagination---- number of items in list : {{@modelLength}} --}}
 {{!-- <h6>number of pages: {{@this.noPages}}</h6> --}}
 <div class="pagination">
-<button type="button" {{on "click" @this.decPage}}> Prev Page</button>
-<h3>{{@this.currentPage}}</h3>
-<button type="button" {{on "click" @this.incPage}}> Next Page</button>
+
+  {{#if (gt @this.currentPage 1)}}
+      <div class='numbers' {{on "click" @this.decPage}}> &larr;  </div>
+  {{/if}}
+  
+  {{#each this.pageNumberArrays as |pageNumber|}}
+      <div class='numbers' {{on "click" (fn @this.setCurrentPage pageNumber)}}>
+         <div class={{if (eq @this.currentPage pageNumber) 'selected'}}>{{pageNumber}}</div>
+       </div>
+  {{/each}}
+  {{#if (lt @this.currentPage @this.noPages)}}
+        <div class='numbers' {{on "click" @this.incPage}}> &rarr;  </div>
+   {{/if}}
+
 </div>
 {{yield}}

@@ -1,12 +1,17 @@
 <li class="card">
+  {{#if (not-eq this.imageUrl '')}}
   <div class="header-image">
      <img src={{this.imageUrl}}>
   </div>
+  {{/if}}
+
   <div class="headline">
-    <h5>{{this.headLine}}</h5>
+    <h5 data-test-headLine>{{this.headLine}}</h5>
+<!--    <h5 data-test-headLine>{{@this.cardFields.Headline}}</h5>-->
   </div>
   <div class="sub-headline">
-    <h6>{{this.subHeadLine}}</h6>
+    <h6 data-test-subHeadLine>{{this.subHeadLine}}</h6>
   </div>
+<!--  <h6 data-test-hello >{{@this.test}}</h6>-->
 </li>
 {{yield}}

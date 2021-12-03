@@ -2,6 +2,10 @@ import Component from '@glimmer/component';
 
 export default class CounterComponent extends Component {
   get headLine() {
+    console.log('cardFields:',this.args.cardFields);
+
+    console.log('HeadLine:',this.args.cardFields.Headline);
+    // debugger;
     return this.args.cardFields.Headline;
   }
   get subHeadLine() {

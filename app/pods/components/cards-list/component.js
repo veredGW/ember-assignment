@@ -17,18 +17,20 @@ export default class CardsList extends Component {
   @action
   incPage() {
     console.log(this.currentPage);
-    if (this.currentPage !== Math.ceil(this.args.list.length / this.MAX_CARDS_PER_PAGE))
+    if (
+      this.currentPage !==
+      Math.ceil(this.args.list.length / this.MAX_CARDS_PER_PAGE)
+    )
       this.currentPage = this.currentPage + 1;
   }
   @action
   decPage() {
     console.log(this.currentPage);
-    if (this.currentPage !== 1)
-      this.currentPage = this.currentPage - 1;
+    if (this.currentPage !== 1) this.currentPage = this.currentPage - 1;
   }
 
   @action
-  setCurrentPage(currentPage){
+  setCurrentPage(currentPage) {
     console.log(currentPage);
     this.currentPage = currentPage;
   }

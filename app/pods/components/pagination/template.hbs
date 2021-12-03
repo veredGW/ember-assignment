@@ -3,7 +3,7 @@
 <div class="pagination">
 
   {{#if (gt @this.currentPage 1)}}
-      <div class='arrow' {{on "click" @this.decPage}}> &larr;  </div>
+      <div data-test-prevpage class='arrow' {{on "click" @this.decPage}}> &larr;  </div>
   {{else}}
       <div class='arrow-disabled' > &larr;  </div>
   {{/if}}
@@ -13,7 +13,7 @@
        </div>
   {{/each}}
   {{#if (lt @this.currentPage @this.noPages)}}
-        <div class='arrow' {{on "click" @this.incPage}}> &rarr;  </div>
+        <div data-test-nextpage class='arrow' {{on "click" @this.incPage}}> &rarr;  </div>
   {{else}}
     <div class='arrow-disabled' > &rarr;  </div>
    {{/if}}

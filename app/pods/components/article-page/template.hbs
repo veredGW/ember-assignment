@@ -1,0 +1,16 @@
+<div class="article-page">
+  {{#if (not-eq this.imageUrl '')}}
+    <div class="header-image">
+      <img src={{this.imageUrl}}>
+    </div>
+  {{/if}}
+  <h5>Written by: {{@this.cardFields.Author.name}}</h5>
+  <div class="headline">
+      <h5 data-test-headLine>{{this.headLine}}</h5>
+  </div>
+  <div class="sub-headline">
+    <h6 data-test-subHeadLine>{{this.subHeadLine}}</h6>
+  </div>
+  <h5>Link: {{@this.cardFields.Link}}</h5>
+</div>
+{{yield}}

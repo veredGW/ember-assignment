@@ -1,7 +1,7 @@
 <div class="article-page">
   {{#if (not-eq this.imageUrl '')}}
     <div class="header-image">
-      <img src={{this.imageUrl}}>
+      <img class="mt-6 rounded-lg w-full h-60" src={{this.imageUrl}}>
     </div>
   {{/if}}
   <h5>Written by: {{@this.cardFields.Author.name}}</h5>

@@ -1,18 +1,18 @@
-<li class="card">
+<li class="w-auto  h-30 sm:w-1/4  border-solid border-4 border-light-gray-500 m-2 bg-white" >
   {{#if (not-eq this.imageUrl '')}}
   <div class="header-image">
-     <img src={{this.imageUrl}}>
+     <img class="mt-6 rounded-lg w-full" src={{this.imageUrl}}>
   </div>
   {{/if}}
 
   <div class="headline">
     <LinkTo @route="articles" @model={{this.cardId}}>
-         <h5 data-test-headLine>{{this.headLine}}</h5>
+         <h5 class="text-blue-400 mt-8 text-base" data-test-headLine>{{this.headLine}}</h5>
     </LinkTo>
 <!--    <h5 data-test-headLine>{{@this.cardFields.Headline}}</h5>-->
   </div>
   <div class="sub-headline">
-    <h6 data-test-subHeadLine>{{this.subHeadLine}}</h6>
+    <h6 class="text-gray-400 mt-8 text-sm" data-test-subHeadLine>{{this.subHeadLine}}</h6>
   </div>
 
 <!--  <h6 data-test-hello >{{@this.test}}</h6>-->

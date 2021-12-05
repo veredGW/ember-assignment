@@ -1,7 +1,7 @@
 {{!-- ----Pagination---- number of items in list : {{@modelLength}} --}}
 {{!-- <h6>number of pages: {{@this.noPages}}</h6> --}}
-<div class="pagination">
-
+<!--<div class="pagination">-->
+<div class="container flex justify-center mx-auto">
   {{#if (gt @this.currentPage 1)}}
       <div data-test-prevpage class='arrow' {{on "click" @this.decPage}}> &larr;  </div>
   {{else}}

@@ -1,5 +1,7 @@
-<div class="show-mobile-list">
-<ul class="container">
+<div class="block sm:hidden">
+<!--<ul class="container">-->
+
+  <ul class="flex flex-row flex-wrap">
   {{log @list}}
   {{#each @list as |card|}}
     <Card
@@ -10,8 +12,9 @@
 </ul>
 </div>
 
-<div  class="show-desktop">
-<ul class="container">
+<div  class="hidden sm:block">
+<!--<ul class="container">-->
+  <ul class="flex flex-row flex-wrap">
   {{log this.cardsOfPage}}
   {{#each this.cardsOfPage as |card|}}
     <Card
@@ -22,6 +25,7 @@
 </ul>
 
 <Pagination
+
   @modelLength={{@list.length}}
   @currentPage={{this.currentPage}}
   @noPages={{this.noPages}}

@@ -2,9 +2,9 @@ import Component from '@glimmer/component';
 
 export default class CounterComponent extends Component {
   get headLine() {
-    console.log('cardFields:', this.args.cardFields);
+    // console.log('cardFields:', this.args.cardFields);
 
-    console.log('HeadLine:', this.args.cardFields.Headline);
+    // console.log('HeadLine:', this.args.cardFields.Headline);
     // debugger;
     return this.args.cardFields.Headline;
   }
@@ -15,5 +15,9 @@ export default class CounterComponent extends Component {
     // debugger
     if (this.args.cardFields.HeaderImage === undefined) return '';
     else return this.args.cardFields.HeaderImage[0].url;
+  }
+  get cardId() {
+    console.log(this.args.id);
+    return this.args.id;
   }
 }

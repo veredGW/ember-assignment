@@ -4,6 +4,7 @@
   {{#each @list as |card|}}
     <Card
       @cardFields={{card.fields}}
+      @id={{card.id}}
    />
  {{/each}}
 </ul>
@@ -15,6 +16,7 @@
   {{#each this.cardsOfPage as |card|}}
     <Card
       @cardFields={{card.fields}}
+      @id={{card.id}}
    />
  {{/each}}
 </ul>

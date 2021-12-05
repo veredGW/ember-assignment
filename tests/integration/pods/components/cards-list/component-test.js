@@ -17,13 +17,13 @@ module('Integration | Component | cards-list', function (hooks) {
       'Sub-headline': 'subsub',
     };
     const listItem = {
-      fields : fields,
+      fields: fields,
     };
     let listOfItems = [];
-    for (let i=0; i < 20; i++){
+    for (let i = 0; i < 20; i++) {
       listOfItems.push(listItem);
     }
-    this.set('list',listOfItems );
+    this.set('list', listOfItems);
     // this.set('list', [listItem, listItem, listItem, listItem, listItem, listItem, listItem ]);
     // console.log(this.list)
     //
@@ -33,9 +33,9 @@ module('Integration | Component | cards-list', function (hooks) {
     //
     // // Template block usage:
     await render(hbs`<CardsList @list={{this.list}}/>`);
-//     assert.equal(this.element.querySelector('h2').textContent.trim(), 'This is Magic', 'title changes after click');
-//   });
-// });
+    //     assert.equal(this.element.querySelector('h2').textContent.trim(), 'This is Magic', 'title changes after click');
+    //   });
+    // });
     assert.dom('.selected').hasText('1');
     // assert.dom(this.element).hasText('template block text');
     await click('[data-test-nextpage]');

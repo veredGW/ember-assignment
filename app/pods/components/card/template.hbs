@@ -1,21 +1,21 @@
-<li class="w-full sm:w-1/3 p-2" >
-  <div class="flex flex-col justify-around border-solid h-full border-4 border-light-gray-500 bg-white">
+<li class="w-full sm:w-1/3 sm:h-50 p-2" >
+  <div class="border-solid rounded-lg h-full border-4 border-light-gray-500 bg-white">
   {{#if (not-eq this.imageUrl '')}}
   <div class="header-image">
-     <img class="mt-6 rounded-lg h-40 w-full" src={{this.imageUrl}}>
+     <img class="rounded-lg h-40 w-full object-cover object-center" src={{this.imageUrl}}>
   </div>
   {{else}}
-    <div class="mt-6 h-40"></div>
+    <div class=" h-40"></div>
   {{/if}}
 
   <div class="headline">
     <LinkTo @route="articles" @model={{this.cardId}}>
-         <h5 class="text-blue-400 m-4 text-base" data-test-headLine>{{this.headLine}}</h5>
+         <h5 class="text-blue-400 font-normal m-4 text-base text-center" data-test-headLine>{{this.headLine}}</h5>
     </LinkTo>
 <!--    <h5 data-test-headLine>{{@this.cardFields.Headline}}</h5>-->
   </div>
   <div class="sub-headline">
-    <h6 class="text-gray-400 m-4 text-sm" data-test-subHeadLine>{{this.subHeadLine}}</h6>
+    <h6 class="text-gray-400 m-4 font-normal text-sm text-center" data-test-subHeadLine>{{this.subHeadLine}}</h6>
   </div>
   </div>
 <!--  <h6 data-test-hello >{{@this.test}}</h6>-->

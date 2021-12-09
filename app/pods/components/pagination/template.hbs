@@ -2,7 +2,7 @@
 {{!-- <h6>number of pages: {{@this.noPages}}</h6> --}}
 <!--<div class="pagination">-->
 <div class="flex justify-center mx-auto">
-  <div class='border-solid p-2 bg-gray-300  border-gray-400 border w-auto'>
+  <div class='border-solid p-2 bg-gray-300  border-gray-400 border w-auto rounded-l-lg text-sm'>
   {{#if (gt @this.currentPage 1)}}
       <div data-test-prevpage class='cursor-pointer' {{on "click" @this.decPage}}> &larr;  </div>
   {{else}}
@@ -10,11 +10,11 @@
   {{/if}}
   </div>
   {{#each this.pageNumberArrays as |pageNumber|}}
-      <div class='border-solid p-2 bg-white cursor-pointer border-gray-400 border w-auto' {{on "click" (fn @this.setCurrentPage pageNumber)}}>
+      <div class='border-solid p-2 bg-white cursor-pointer border-gray-400 border w-auto text-sm' {{on "click" (fn @this.setCurrentPage pageNumber)}}>
          <div class={{if (eq @this.currentPage pageNumber) 'font-semibold'}}>{{pageNumber}}</div>
        </div>
   {{/each}}
-  <div class='border-solid p-2 bg-gray-300  border-gray-400 border w-auto'>
+  <div class='border-solid p-2 bg-gray-300  border-gray-400 border w-auto rounded-r-lg text-sm'>
   {{#if (lt @this.currentPage @this.noPages)}}
         <div class="cursor-pointer"data-test-nextpage  {{on "click" @this.incPage}}> &rarr;  </div>
   {{else}}

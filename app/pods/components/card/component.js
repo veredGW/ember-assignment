@@ -1,6 +1,6 @@
 import Component from '@glimmer/component';
 
-export default class CounterComponent extends Component {
+export default class CardComponent extends Component {
   get headLine() {
     // console.log('cardFields:', this.args.cardFields);
 
@@ -14,7 +14,9 @@ export default class CounterComponent extends Component {
   get imageUrl() {
     // debugger
     if (this.args.cardFields.HeaderImage === undefined) return '';
-    else return this.args.cardFields.HeaderImage[0].url;
+    // else return this.args.cardFields.HeaderImage[0].url;
+    // from yaml the attribute is simpler
+    else return this.args.cardFields.HeaderImage;
   }
   get cardId() {
     console.log(this.args.id);

@@ -1,16 +1,14 @@
-<div class="article-page">
+<div class="bg-white h-screen">
   {{#if (not-eq this.imageUrl '')}}
     <div class="header-image">
-      <img class="mt-6 w-full h-60 object-cover object-center" src={{this.imageUrl}}>
+      <img class="mb-6 w-full h-60 object-cover object-center" src={{this.imageUrl}}>
     </div>
   {{/if}}
-  <h5 class="text-gray-400 m-4 text-base">Written by: {{@this.cardFields.Author.name}}</h5>
-  <div class="headline">
-      <h5 data-test-headLine class="text-gray-400 m-4 text-base">{{this.headLine}}</h5>
-  </div>
-  <div class="sub-headline">
-    <h6 data-test-subHeadLine class="text-gray-400 m-4 text-small">{{this.subHeadLine}}</h6>
-  </div>
-  <h5 class="text-gray-400 m-4 text-base">Link: {{@this.cardFields.Link}}</h5>
+
+  <h5 data-test-headLine class="text-gray-500 font-normal text-center m-4 underline text-lg">{{this.headLine}}</h5>
+  <h5 class="text-gray-500 m-4 text-base">Written by: {{@this.cardFields.Author.name}}</h5>
+  <h6 data-test-subHeadLine class="text-gray-500 m-4 text-small">{{this.subHeadLine}}</h6>
+
+  <h5 class="text-blue-400 m-4 text-base">Link: {{@this.cardFields.Link}}</h5>
 </div>
 {{yield}}

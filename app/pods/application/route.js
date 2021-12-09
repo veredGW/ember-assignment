@@ -6,15 +6,11 @@ export default class ApplicationRoute extends Route {
     // debugger;
     let response = await fetch(
       'http://localhost:3000/articles',
-      // {
-      //   headers: {
-      //     Access-Control-Allow-Origin: * ,
-      //   },
-      // }
     );
-    // debugger
     let data = await response.json();
     return data;
+
+    // fetch from airtable:
     // let response = await fetch(
     //   'https://api.airtable.com/v0/appedbrLc74Dun7pV/Content?fields=Headline&fields=HeaderImage&fields=Sub-headline',
     //   {
@@ -27,4 +23,4 @@ export default class ApplicationRoute extends Route {
     // return data.records;
   }
 }
-///fields=Headline&fields=HeadrImage&fields=Sub-headline
+

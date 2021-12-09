@@ -5,16 +5,11 @@ export default class ArticlesRoute extends Route {
     const { article_id } = params;
     let response = await fetch(
       'http://localhost:3000/articles/' + article_id,
-      // {
-      //   headers: {
-      //     Access-Control-Allow-Origin: * ,
-      //   },
-      // }
     );
-    debugger
     let data = await response.json();
     return data[0].fields;
-    // airtable
+
+    // fetch from airtable
     // let response = await fetch(
     //   'https://api.airtable.com/v0/appedbrLc74Dun7pV/Content/' + article_id,
     //   {

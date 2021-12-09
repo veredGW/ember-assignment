@@ -15,8 +15,9 @@ export default class ArticlePageComponent extends Component {
     return this.args.cardFields['Sub-headline'];
   }
   get imageUrl() {
-    // debugger
+    debugger
     if (this.args.cardFields.HeaderImage === undefined) return '';
-    else return this.args.cardFields.HeaderImage[0].url;
+    // else return this.args.cardFields.HeaderImage[0].url;
+    else return this.args.cardFields.HeaderImage;
   }
 }

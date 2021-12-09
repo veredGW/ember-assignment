@@ -12,7 +12,7 @@ export default class ApplicationRoute extends Route {
       //   },
       // }
     );
-    debugger
+    // debugger
     let data = await response.json();
     return data;
     // let response = await fetch(

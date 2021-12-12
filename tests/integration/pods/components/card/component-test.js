@@ -10,11 +10,11 @@ module('Integration | Component | card', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
     // this.set('headline', { foo: 'bar' });
-    const obj = [];
-    obj.push({ url: '' });
+    // const obj = [];
+    // obj.push({ url: '' });
     this.set('cardFields', {
       Headline: 'Yabadabadu!',
-      HeaderImage: obj,
+      HeaderImage: '',
       'Sub-headline': 'subsub',
     });
     console.log(this.cardFields);

@@ -7,7 +7,7 @@ export default class ArticlesRoute extends Route {
       'http://localhost:3000/articles/' + article_id,
     );
     let data = await response.json();
-    return data[0].fields;
+    return data[0];
 
     // fetch from airtable
     // let response = await fetch(

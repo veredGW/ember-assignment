@@ -5,7 +5,7 @@
   {{log @list}}
   {{#each @list as |card|}}
     <Card
-      @cardFields={{card.fields}}
+      @cardFields={{card}}
       @id={{card.id}}
    />
  {{/each}}
@@ -18,7 +18,7 @@
   {{log this.cardsOfPage}}
   {{#each this.cardsOfPage as |card|}}
     <Card
-      @cardFields={{card.fields}}
+      @cardFields={{card}}
       @id={{card.id}}
    />
  {{/each}}

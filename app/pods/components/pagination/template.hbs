@@ -16,7 +16,7 @@
   {{/each}}
   <div class='border-solid p-2 bg-gray-300  border-gray-400 border w-auto rounded-r-lg text-sm'>
   {{#if (lt @this.currentPage @this.noPages)}}
-        <div class="cursor-pointer"data-test-nextpage  {{on "click" @this.incPage}}> &rarr;  </div>
+        <div data-test-nextpage class="cursor-pointer"  {{on "click" @this.incPage}}> &rarr;  </div>
   {{else}}
     <div class='text-gray-400' > &rarr;  </div>
    {{/if}}

@@ -13,12 +13,12 @@ module('Integration | Component | card', function (hooks) {
     // const obj = [];
     // obj.push({ url: '' });
     this.set('cardFields', {
-      Headline: 'Yabadabadu!',
-      HeaderImage: '',
-      'Sub-headline': 'subsub',
+      headLine: 'Yabadabadu!',
+      headerImage: '',
+      subHeadLine: 'subsub',
     });
     console.log(this.cardFields);
-    this.set('test', 'Hello');
+    // this.set('test', 'Hello');
     // debugger
     // await render(hbs`<Card @cardFields="{{this.cardFields}} @test={{this.test}}"/>`);
     //await render(hbs`<Card @cardFields={{this.cardFields}} @test={{this.test}}/>`);
@@ -28,7 +28,7 @@ module('Integration | Component | card', function (hooks) {
     assert.dom('[data-test-subHeadLine]').hasText('subsub');
     // assert.dom('[data-test-hello]').hasText('Hello');
 
-    // await this.pauseTest();
+    //await this.pauseTest();
     // assert.dom(this.element).hasText('');
     //
     // // Template block usage:

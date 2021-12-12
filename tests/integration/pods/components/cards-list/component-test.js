@@ -12,9 +12,9 @@ module('Integration | Component | cards-list', function (hooks) {
     // const obj = [];
     // obj.push({ url: '' });
     const fields = {
-      Headline: 'Yabadabadu!',
-      HeaderImage: '',
-      'Sub-headline': 'subsub',
+      headLine: 'Yabadabadu!',
+      headerImage: '',
+      subHeadLine: 'subsub',
     };
     // const listItem = {
     //   fields: fields,

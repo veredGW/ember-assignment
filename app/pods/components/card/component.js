@@ -3,20 +3,21 @@ import Component from '@glimmer/component';
 export default class CardComponent extends Component {
   get headLine() {
     // console.log('cardFields:', this.args.cardFields);
-
+    // debugger
     // console.log('HeadLine:', this.args.cardFields.Headline);
     // debugger;
-    return this.args.cardFields.Headline;
+    return this.args.cardFields.headLine;
   }
   get subHeadLine() {
-    return this.args.cardFields['Sub-headline'];
+    // debugger
+    return this.args.cardFields.subHeadLine;
   }
   get imageUrl() {
-    // debugger
-    if (this.args.cardFields.HeaderImage === undefined) return '';
+    //debugger
+    if (this.args.cardFields.headerImage === undefined) return '';
     // else return this.args.cardFields.HeaderImage[0].url;
     // from yaml the attribute is simpler
-    else return this.args.cardFields.HeaderImage;
+    else return this.args.cardFields.headerImage;
   }
   get cardId() {
     console.log(this.args.id);

@@ -7,15 +7,16 @@ export default class ArticlePageComponent extends Component {
     // console.log('HeadLine:', this.args.cardFields.Headline);
     // debugger;
     console.log(this.args.cardFields);
-    return this.args.cardFields.Headline;
+    return this.args.cardFields.headLine;
   }
 
   get subHeadLine() {
-    return this.args.cardFields['Sub-headline'];
+    return this.args.cardFields.subHeadLine;
   }
   get imageUrl() {
-    if (this.args.cardFields.HeaderImage === undefined) return '';
+    //debugger
+    if (this.args.cardFields.headerImage === undefined) return '';
     // else return this.args.cardFields.HeaderImage[0].url;
-    else return this.args.cardFields.HeaderImage;
+    else return this.args.cardFields.headerImage;
   }
 }

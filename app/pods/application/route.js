@@ -1,14 +1,18 @@
 import Route from '@ember/routing/route';
 import fetch from 'fetch';
+import { inject as service } from '@ember/service';
 
 export default class ApplicationRoute extends Route {
+  @service store;
   async model() {
     // debugger;
-    let response = await fetch(
-      'http://localhost:3000/articles',
-    );
-    let data = await response.json();
-    return data;
+    const data = await this.store.findAll('article');
+    console.log(data)
+    return data
+   // debugger
+   //  let response = await fetch('http://localhost:3000/articles');
+   //  let data = await response.json();
+   //  return data;
 
     // fetch from airtable:
     // let response = await fetch(
@@ -23,4 +27,3 @@ export default class ApplicationRoute extends Route {
     // return data.records;
   }
 }
-

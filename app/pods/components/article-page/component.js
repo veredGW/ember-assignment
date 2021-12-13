@@ -1,4 +1,5 @@
 import Component from '@glimmer/component';
+import { action } from '@ember/object';
 
 export default class ArticlePageComponent extends Component {
   get headLine() {
@@ -19,4 +20,12 @@ export default class ArticlePageComponent extends Component {
     // else return this.args.cardFields.HeaderImage[0].url;
     else return this.args.cardFields.headerImage;
   }
+
+  @action
+  postArticle(){
+
+    console.log('post')
+
+  }
 }
+

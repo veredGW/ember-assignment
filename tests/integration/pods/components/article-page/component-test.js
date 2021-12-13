@@ -10,17 +10,25 @@ module('Integration | Component | article-page', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<ArticlePage />`);
+    this.set('cardFields', {
+      headLine: 'Yabadabadu!',
+      headerImage: '',
+      subHeadLine: 'subsub',
+    });
+    console.log(this.cardFields);
+    await render(hbs`<ArticlePage @cardFields={{this.cardFields}}/>`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom('[data-test-headLine]').hasText('Yabadabadu!');
+    assert.dom('[data-test-subHeadLine]').hasText('subsub');
+    // assert.dom(this.element).hasText('');
 
-    // Template block usage:
-    await render(hbs`
-      <ArticlePage>
-        template block text
-      </ArticlePage>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    // // Template block usage:
+    // await render(hbs`
+    //   <ArticlePage>
+    //     template block text
+    //   </ArticlePage>
+    // `);
+    //
+    // assert.dom(this.element).hasText('template block text');
   });
 });

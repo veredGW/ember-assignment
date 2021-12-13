@@ -6,9 +6,9 @@ export default class ArticlesRoute extends Route {
   async model(params) {
     const { article_id } = params;
 
-    let try_response = await this.store.findRecord('article', article_id)
-    console.log(try_response)
-    return try_response
+    let response = await this.store.findRecord('article', article_id)
+    console.log(response)
+    return response
     // debugger
     // let response = await fetch('http://localhost:3000/articles/' + article_id);
     // let data = await response.json();
@@ -28,4 +28,6 @@ export default class ArticlesRoute extends Route {
     // // return article_id;
     // return data.fields;
   }
+
+
 }

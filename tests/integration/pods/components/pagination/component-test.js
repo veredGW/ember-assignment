@@ -10,17 +10,20 @@ module('Integration | Component | pagination', function (hooks) {
     // Set any properties with this.set('myProperty', 'value');
     // Handle any actions with this.set('myAction', function(val) { ... });
 
-    await render(hbs`<Pagination />`);
+    this.set('setCurrentPage', function(){
+      return 1;
+    });
+    await render(hbs`<Pagination @setCurrentPage={{this.setCurrentPage}}/>`);
 
-    assert.dom(this.element).hasText('');
+    assert.dom(this.element).hasText("← 1 →");
 
     // Template block usage:
-    await render(hbs`
-      <Pagination>
-        template block text
-      </Pagination>
-    `);
-
-    assert.dom(this.element).hasText('template block text');
+    // await render(hbs`
+    //   <Pagination>
+    //     template block text
+    //   </Pagination>
+    // `);
+    //
+    // assert.dom(this.element).hasText('template block text');
   });
 });

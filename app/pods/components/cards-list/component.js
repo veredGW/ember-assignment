@@ -3,7 +3,15 @@ import { tracked } from '@glimmer/tracking';
 import { action } from '@ember/object';
 
 export default class CardsList extends Component {
-  @tracked currentPage = 1;
+  constructor(...args) {
+    super(...args);
+    //debugger
+    this.currentPage = 1;
+    if ((localStorage.currentPage) && (localStorage.currentPage>=1) && (localStorage.currentPage<=this.noPages))
+      this.currentPage = JSON.parse(localStorage.currentPage)
+
+  }
+  @tracked currentPage ;
   MAX_CARDS_PER_PAGE = 6;
   get noPages() {
     return Math.ceil(this.args.list.length / this.MAX_CARDS_PER_PAGE);
@@ -18,20 +26,26 @@ export default class CardsList extends Component {
   incPage() {
     console.log(this.currentPage);
     if (
-      this.currentPage !==
+      this.currentPage <
       Math.ceil(this.args.list.length / this.MAX_CARDS_PER_PAGE)
-    )
+    ) {
       this.currentPage = this.currentPage + 1;
+      localStorage.setItem('currentPage', JSON.stringify(this.currentPage));
+    }
   }
   @action
   decPage() {
     console.log(this.currentPage);
-    if (this.currentPage !== 1) this.currentPage = this.currentPage - 1;
+    if (this.currentPage !== 1) {
+      this.currentPage = this.currentPage - 1;
+      localStorage.setItem('currentPage', JSON.stringify(this.currentPage));
+    }
   }
 
   @action
   setCurrentPage(currentPage) {
     console.log(currentPage);
     this.currentPage = currentPage;
+    localStorage.setItem('currentPage', JSON.stringify(this.currentPage));
   }
 }

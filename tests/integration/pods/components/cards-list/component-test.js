@@ -20,9 +20,10 @@ module('Integration | Component | cards-list', function (hooks) {
     //   fields: fields,
     // };
     let listOfItems = [];
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 14; i++) {
       listOfItems.push(fields);
     }
+    localStorage.setItem('currentPage', JSON.stringify('1'));
     this.set('list', listOfItems);
     // this.set('list', [listItem, listItem, listItem, listItem, listItem, listItem, listItem ]);
     // console.log(this.list)
@@ -42,10 +43,10 @@ module('Integration | Component | cards-list', function (hooks) {
     assert.dom('.font-semibold').hasText('2');
     await click('[data-test-nextpage]');
     assert.dom('.font-semibold').hasText('3');
-    await click('[data-test-nextpage]');
-    assert.dom('.font-semibold').hasText('4');
+    // await click('[data-test-nextpage]');
+    // assert.dom('.font-semibold').hasText('4');
     await click('[data-test-prevpage]');
-    assert.dom('.font-semibold').hasText('3');
+    assert.dom('.font-semibold').hasText('2');
     // await this.pauseTest();
   });
 });

@@ -18,7 +18,7 @@ export default class ArticlePageComponent extends Component {
   }
   get imageUrl() {
     //debugger
-    if (this.args.cardFields.headerImage === undefined) return '';
+    if (this.args.cardFields.headerImage === null) return '';
     // else return this.args.cardFields.HeaderImage[0].url;
     else return this.args.cardFields.headerImage;
   }
@@ -28,8 +28,9 @@ export default class ArticlePageComponent extends Component {
 
     console.log('post')
     let post = this.store.createRecord('article', {
-      headLine: 'Rails is Omakase',
-      subHeadLine: 'Lorem ipsum'
+      headLine: 'Rails is Omakase2',
+      subHeadLine: 'Lorem ipsum2',
+      headerImage: ''
     });
 
 

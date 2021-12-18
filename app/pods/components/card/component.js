@@ -14,7 +14,7 @@ export default class CardComponent extends Component {
   }
   get imageUrl() {
     //debugger
-    if (this.args.cardFields.headerImage === undefined) return '';
+    if (this.args.cardFields.headerImage === null) return '';
     // else return this.args.cardFields.HeaderImage[0].url;
     // from yaml the attribute is simpler
     else return this.args.cardFields.headerImage;
